@@ -13,6 +13,7 @@ function App() {
         <Text>Hello world !</Text>
         <Text>Hello world !</Text>
         <Text>Hello world !</Text>
+        <Text>Hello world !</Text>
         <View>
           <TextInput style={{ height: 30, borderWidth: 1 }} aria-label='input' aria-labelledby='formLabel' />
         </View>
