@@ -1,25 +1,14 @@
-import react from 'react';
-import {
-  View,
-  Text,
-  SafeAreaView,
-  TextInput
-} from 'react-native';
+import React from "react";
+import { SafeAreaView, ScrollView, Text, View } from 'react-native';
+import FlatCard from "./components/FlatCard";
 
 function App() {
   return (
     <SafeAreaView>
-      <View>
-        <Text>Hello world !</Text>
-        <Text>Hello world !</Text>
-        <Text>Hello world !</Text>
-        <Text>Hello world !</Text>
-        <View>
-          <TextInput style={{ height: 30, borderWidth: 1 }} aria-label='input' aria-labelledby='formLabel' />
-        </View>
-      </View>
+      <ScrollView>
+        <FlatCard />
+      </ScrollView>
     </SafeAreaView>
   )
-
 }
 export default App;
