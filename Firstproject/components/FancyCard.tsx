@@ -54,18 +54,37 @@ const styles = StyleSheet.create({
         borderTopLeftRadius: 6,
         borderTopRightRadius: 6,
     },
-    cardBody: {},
+    cardBody: {
+        flex: 1,
+        // flexShrink: 1,
+        flexGrow: 1,
+        paddingHorizontal: 12,
+
+    },
     cardTitle: {
         color: '#000000',
+        fontSize: 22,
+        fontWeight: "bold",
+        marginBottom: 5,
     },
     cardLabel: {
         color: '#000000',
+        fontSize: 18,
+        marginBottom: 5,
     },
     cardDesc: {
-        color: '#000000',
+        color: '#242B2E',
+        fontSize: 14,
+        marginBottom: 7,
     },
     cardFooter: {
         color: '#000000',
+        fontSize: 15,
+        marginBottom: 12,
+        textAlign: 'right',
+        fontWeight: "bold"
+        // justifyContent: 'flex-end'
+
     },
 
 });
