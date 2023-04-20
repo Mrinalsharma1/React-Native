@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: 'bold',
         padding: 4,
+        color: '#f1f1f1',
     },
     Container: {
         flex: 1,

@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: 'bold',
         marginHorizontal: 8,
+        color: '#f1f1f1',
     },
     cards: {
         width: 380,
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
         borderRadius: 6,
         marginVertical: 12,
         marginHorizontal: 16,
-        // backgroundColor: '#ED2B2A'
+        backgroundColor: '#fff'
     },
     cardElivateds: {
         elevation: 3,
@@ -79,7 +80,7 @@ const styles = StyleSheet.create({
     },
     cardFooter: {
         color: '#000000',
-        fontSize: 15,
+        fontSize: 16,
         marginBottom: 12,
         textAlign: 'right',
         fontWeight: "bold"

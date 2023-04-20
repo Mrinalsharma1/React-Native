@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 8,
         fontSize: 24,
         fontWeight: 'bold',
+        color: '#f1f1f1',
 
     },
     Card: {
