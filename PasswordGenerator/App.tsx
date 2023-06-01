@@ -58,9 +58,9 @@ export default function App() {
     let result = ''
     for (let i = 0; i < passwordLength; i++) {
       const characterIndex = Math.round(Math.random() * characters.length)
-      console.log("char -> " + characterIndex)
+      // console.log("char -> " + characterIndex)
       result += characters.charAt(characterIndex)
-      console.warn(`result is -> ${result}`)
+      // console.warn(`result is -> ${result}`)
     }
     return result
 
@@ -86,7 +86,7 @@ export default function App() {
             initialValues={{ passwordLength: '' }}
             validationSchema={PasswordSchema}
             onSubmit={values => {
-              console.log(values);
+              // console.log(values);
               generatePasswordString(+values.passwordLength)
             }}
           >
