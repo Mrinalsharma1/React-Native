@@ -1,6 +1,9 @@
 import React, { useState } from "react";
-import { Image, ImageSourcePropType, Pressable, StyleSheet, Text, View } from "react-native";
+import { Image, ImageSourcePropType, Pressable, StyleSheet, TouchableWithoutFeedback, Text, View } from "react-native";
 import type { PropsWithChildren } from "react";
+import ReactNativeHapticFeedback from "react-native-haptic-feedback";
+import { Vibration } from 'react-native';
+
 
 import DiceOne from '../assets/One.png'
 import DiceTwo from '../assets/Two.png'
@@ -12,6 +15,11 @@ import DiceSix from '../assets/Six.png'
 type DiceProps = PropsWithChildren<{
   imageUrl: ImageSourcePropType
 }>
+
+const options = {
+  enableVibrateFallback: true,
+  ignoreAndroidSystemSettings: false,
+};
 
 const Dice = ({ imageUrl }: DiceProps): JSX.Element => {
   return (
@@ -49,15 +57,19 @@ function App(): JSX.Element {
         setDiceImage(DiceOne)
         break;
     }
+    ReactNativeHapticFeedback.trigger("impactMedium", options);
   }
   return (
     <View style={styles.container}>
       <Dice imageUrl={diceImage} />
-      <Pressable onPress={rollDiceOnTap}>
+      <Pressable onPressIn={() => Vibration.vibrate()}>
         <Text style={styles.rollDiceBtnText}>
           Roll The Dice
         </Text>
       </Pressable>
+      {/* <TouchableWithoutFeedback
+        onPressIn={() => Vibration.vibrate()}
+      /> */}
     </View>
   );
 }
